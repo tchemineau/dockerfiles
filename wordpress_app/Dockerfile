@@ -35,7 +35,8 @@ RUN sed -i 's/password_here/wordpress123/' /home/wordpress/app/wp-config.php
 RUN sed -i 's/username_here/wordpress/' /home/wordpress/app/wp-config.php
 
 ADD scripts/start.sh /home/wordpress/start.sh
+RUN chmod +x /home/wordpress/start.sh
 
 VOLUME ["/home/wordpress"]
 EXPOSE 80
-CMD /bin/bash
+CMD /home/wordpress/start.sh && /bin/bash
