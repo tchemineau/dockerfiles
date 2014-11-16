@@ -5,7 +5,7 @@
 #   docker build -t tchemineau/wordpress_app:1.0 .
 #
 # How to use this image ?
-#   docker run --name mywordpress_app -i -d -P tchemineau/wordpress_app:1.0
+#   docker run --name mywordpress_app -i -d -P -e WORDPRESS_DB_HOST=<IP> tchemineau/wordpress_app:1.0
 #   docker port mywordpress_app
 #
 
@@ -38,4 +38,4 @@ ADD scripts/start.sh /home/wordpress/start.sh
 
 VOLUME ["/home/wordpress"]
 EXPOSE 80
-CMD /home/wordpress/start.sh && /bin/bash
+CMD /bin/bash
