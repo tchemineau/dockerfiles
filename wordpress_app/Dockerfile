@@ -5,7 +5,7 @@
 #   docker build -t tchemineau/wordpress_app:1.0 .
 #
 # How to use this image ?
-#   docker run --name mywordpress_app -i -d -P -e WORDPRESS_DB_HOST=<IP> tchemineau/wordpress_app:1.0
+#   docker run --name mywordpress_app -i -t -d -p 40080:80 -e WORDPRESS_DB_HOST=<IP> tchemineau/wordpress_app:1.0
 #   docker port mywordpress_app
 #
 

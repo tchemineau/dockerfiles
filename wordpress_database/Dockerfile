@@ -5,7 +5,7 @@
 #   docker build -t tchemineau/wordpress_database:1.0 .
 #
 # How to use this image ?
-#   docker run --name mywordpress_database -i -d -P tchemineau/wordpress_database:1.0
+#   docker run --name mywordpress_database -i -t -d -p 43306:3306 tchemineau/wordpress_database:1.0
 #   docker port mywordpress_database
 #
 
